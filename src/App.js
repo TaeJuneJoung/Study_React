@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hello from './Hello';
+import Wrapper from './Wrapper';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Wrapper>
+        <Hello 
+        //이곳에서는 이런식으로 주석을 사용
+        name="react"
+        color="blue"
+        isSpecial={true} //true값을 주지 않고 변수만 주어도 default -> true
+        />
+        <Hello />
+        <Hello />
+       </Wrapper>
     </div>
   );
 }
